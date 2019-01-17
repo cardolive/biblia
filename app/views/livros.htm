@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link href="app/css/default.css" rel="stylesheet">
+    <link href="app/css/style.css" rel="stylesheet">
+
+    <title>Livros</title>
+  </head>
+  <body>
+   <!-- Bootstrap grid options
+   	O bootstrap divide a página em 12 colunas
+   .col-xs-   	telas smartphone (xs - extra small)
+   .col-sm-	telas tablets    (sm - small)
+   .col-md-	telas notebook   (md - medium)
+   .col-lg-	telas desktop    (lg - large)
+   
+    -->
+	<div class="row">
+		
+	    		<repeat group="{{ @livros }}" value="{{ @livro }}">
+	    		
+	    			<check if="{{ @livro.testamento=='1' }}">
+	    			<hr>
+	    				<true>
+	    				
+	    					<check if="{{@livro.nome=='Gênesis' }}">
+	    						<div class="col-lg-12" ><h1><center>Velho Testamento</center></h1></div>
+						</check>	
+	    				</true>
+	   				<false>
+	   					
+	   					<check if="{{@livro.nome=='Mateus' }}">
+	    						<div class="col-lg-12" ><h1><center>Novo Testamento</center></h1></div>
+						</check>	
+	    				</false>
+	    				<hr>
+				</check>
+	     		
+	    			<div class="col-lg-1" ><center><a href="{{ 'livro/'.@livro.id }}">{{ @livro.nome }}</a> </center></div>
+	    		
+			</repeat>
+		
+	</div>		
+	
+  </body>
+</html>

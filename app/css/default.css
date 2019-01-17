@@ -1,0 +1,11 @@
+html, body {
+    color: #2C2C2C;
+    font-size: 15px;
+    letter-spacing: -.01em;
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}

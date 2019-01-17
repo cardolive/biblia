@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link href="app/css/default.css" rel="stylesheet">
+    <link href="app/css/style.css" rel="stylesheet">
+
+    <title>Versículos</title>
+  </head>
+  <body>
+   <!-- Bootstrap table options
+   	A classe .table adiciona um estilo básico (preenchimento de luz e apenas divisores horizontais) a uma tabela.
+   	A classe .table-striped adiciona listras de zebra a uma tabela.
+   	A classe .table-bordered adiciona bordas em todos os lados da tabela e células
+   	A classe .table-hover adiciona um efeito de foco (cor de plano de fundo cinza) nas linhas da tabela.
+	A classe .table-condensed torna uma tabela mais compacta ao cortar o preenchimento de células (cell padding) ao meio.
+	
+	A classe .table-responsive cria uma tabela responsiva que rolará horizontalmente em pequenos dispositivos (abaixo de 768px). Ao visualizar em algo maior que 768px de largura, não há diferença
+   
+    -->
+    
+    	<h2><center>{{ @livro.nome }}  {{ @versiculos[0].chapter }}<center></h2>
+	<hr>
+	<div class="table-responsive">  		
+		<table  class="table table-striped">		
+			<repeat group="{{ @versiculos }}" value="{{ @verso }}">
+		    		<tr>
+		    			<td><center><strong>{{ @verso.verse }}</strong></center></td><td> {{ @verso.text }}</td>
+		    		</tr>
+			</repeat>
+		</table>
+		
+		<div class="row">
+			<repeat group="{{ @livro.capitulos }}" value="{{ @cap }}">
+				<div class="col-lg-1" ><center><a href="{{ '/biblia/capitulo/'.@livro.id.'/'.@cap.chapter }}">{{ @cap.chapter }}</a></center></div>
+			</repeat>
+		</div>	
+	</div>				
+  </body>
+</html>

@@ -1,0 +1,7 @@
+#ignorando arquivos
+*.project
+*.buildpath
+#ignorando pastas
+tmp/
+.settings/
+nbproject/

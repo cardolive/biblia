@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link href="app/css/default.css" rel="stylesheet">
+    <link href="app/css/style.css" rel="stylesheet">
+
+    <title>Resultado</title>
+  </head>
+  <body>
+  <div class="container">
+     
+    	<h2><center>Busca por texto<center></h2>
+	<hr>
+
+  
+	<form class="form-inline" action="/biblia/busca">
+		<div class="form-group">
+	    		<label for="txt">Procurar por:</label>
+	    		<input type="text" class="form-control" name="termo" id="txt" size="70">
+	  	</div>
+	  	<button type="submit" class="btn btn-default">Buscar</button>
+	</form> 
+		
+	<hr>
+
+	<h3><center>Resultado<center></h3>
+	<p>Encontrada(s) {{sizeof( @versiculos)}} ocorrência(s) com o termo "{{ @termo }}":</p>
+	<div class="table-responsive">  		
+		<table  class="table table-striped">	
+		 	<thead>
+				      <tr>
+				<th>Livro</th>
+				<th>Capítulo</th>
+				<th>Versículo</th>
+				<th>Texto</th>
+			      </tr>
+		    	</thead>
+		    	<tbody>	
+				<repeat group="{{ @versiculos }}" value="{{ @verso }}">
+			    		<tr>
+			    			<td>{{ @verso.nomeLivro }}</td>
+			    			<td align="right"><a href="{{ '/biblia/capitulo/'.@verso.book_id.'/'.@verso.chapter }}">{{ @verso.chapter }}</a></td>
+			    			<td align="right">{{ @verso.verse }}</td><td> {{ @verso.text }}</td>
+			    		</tr>
+				</repeat>
+			</tbody>
+		</table>
+		
+
+		</div>	
+	</div>	
+		
+</div>	
+  </body>
+</html>

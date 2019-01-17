@@ -1,0 +1,14 @@
+{
+    "name": "biblia",
+    "description": "acesso ao bd com a biblia por versiculos",
+    "authors": [
+        {
+            "name": "ricardo",
+            "email": "rveira@usp.br"
+        }
+    ],
+    "require": {
+
+    		"bcosca/fatfree" : "^3.6"
+	}
+}
