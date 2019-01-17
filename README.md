@@ -41,7 +41,15 @@ Para tornar isso efetivo, por favor, digite o seguinte comando abaixo, na pasta 
 > composer update
 
 
-Depois de concluir essa etapa, uma nova pasta chamada 'vendor' deve aparecer na pasta do projeto. A pasta 'vendor' contém as bibliotecas de terceiros instaladas pelo compositor. Agora a diversão começa.
+Depois de concluir essa etapa, uma nova pasta chamada 'vendor' deve aparecer na pasta do projeto. A pasta 'vendor' contém as bibliotecas de terceiros instaladas pelo compositor.
+
+Para ver o resultado no navegador, você precisa executar um servidor da Web em sua máquina. Se você quer fazer um teste rápido, o servidor web do PHP é uma ótima opção (a partir do PHP 5.4.0). Você pode iniciá-lo emitindo o seguinte comando do seu terminal quando estiver no diretório do seu projeto:
+
+> php -S localhost:8088 -t .
+
+ou 
+
+> sudo php -S localhost:80 -t .
 
 
 
