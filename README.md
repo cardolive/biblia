@@ -20,20 +20,19 @@ Siguindo as instruções do processo de iniciação do projeto do 'Composer', ao
 
 O conteúdo será similar a este:
 
-{
-    "name": "biblia",
-    "description": "acesso ao bd com a biblia por versiculos",
-    "authors": [
-        {
-            "name": "ricardo",
-            "email": "email@empresa.com.br"
-        }
-    ],
-    "require": {
-
-    		"bcosca/fatfree" : "^3.6"
-	}
-}
+>{
+>    "name": "biblia",
+>    "description": "acesso ao bd com a biblia por versiculos",
+>    "authors": [
+>        {
+>            "name": "ricardo",
+>            "email": "email@empresa.com.br"
+>        }
+>    ],
+>    "require": {
+>    		"bcosca/fatfree" : "^3.6"
+>	}
+>}
 
 
 Para tornar isso efetivo, por favor, digite o seguinte comando abaixo, na pasta do seu projeto no terminal.
